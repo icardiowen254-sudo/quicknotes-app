@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="QuickNotes is a simple place to capture and organize your thoughts.">
+  <title>QuickNotes | Your little space for big ideas</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="#" aria-label="QuickNotes home"><span class="brand-mark">Q</span> QuickNotes</a>
+      <p class="header-tagline">A little space for your big ideas.</p>
+    </div>
+  </header>
+
+  <main class="app-main">
+    <section class="welcome-section" aria-labelledby="welcome-title">
+      <p class="eyebrow">YOUR THOUGHTS, ORGANIZED</p>
+      <h1 id="welcome-title">Catch that thought.</h1>
+      <p class="welcome-copy">Keep the little reminders, bright ideas, and important things you don't want to forget.</p>
+    </section>
+
+    <section class="composer-section panel" aria-labelledby="composer-title">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">NEW NOTE</p>
+          <h2 id="composer-title">What's on your mind?</h2>
+        </div>
+        <span class="heading-icon" aria-hidden="true">✎</span>
+      </div>
+      <form id="note-form">
+        <div class="form-field note-field">
+          <label for="note-input">Your note</label>
+          <input id="note-input" name="note" type="text" maxlength="250" placeholder="Write something worth remembering..." autocomplete="off">
+          <p class="field-hint">Keep it short and sweet — up to 200 characters.</p>
+        </div>
+        <div class="form-field category-field">
+          <label for="note-category">Category</label>
+          <select id="note-category" name="category">
+            <option value="personal">Personal</option>
+            <option value="work">Work</option>
+            <option value="study">Study</option>
+          </select>
+        </div>
+        <button class="primary-button" type="submit"><span aria-hidden="true">+</span> Add note</button>
+      </form>
+      <p id="error-message" class="error-message" role="alert" aria-live="polite"></p>
+    </section>
+
+    <section class="notes-section" aria-labelledby="notes-title">
+      <div class="notes-toolbar">
+        <div>
+          <p class="eyebrow">YOUR COLLECTION</p>
+          <h2 id="notes-title">Your notes</h2>
+          <p id="note-count" class="note-count" aria-live="polite">You have no notes yet.</p>
+        </div>
+        <div class="search-field">
+          <label class="visually-hidden" for="search-input">Search your notes</label>
+          <span aria-hidden="true">⌕</span>
+          <input id="search-input" type="search" placeholder="Search notes..." autocomplete="off">
+        </div>
+      </div>
+      <ul id="notes-list" class="notes-list" aria-label="Your saved notes"></ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Made for the thoughts that matter. <span aria-hidden="true">✦</span> QuickNotes</p>
+  </footer>
+</body>
+</html>
